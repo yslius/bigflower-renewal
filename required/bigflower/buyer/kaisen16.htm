@@ -1,0 +1,452 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<META http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<title>切花　相場表示　16回戦</title>
+</head>
+
+<SCRIPT language="JavaScript" src="../frame.js?20220711-4A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"></SCRIPT>
+<SCRIPT language="JavaScript">
+
+	frame();
+
+//-->
+</SCRIPT>
+<SCRIPT langage="JavaScript">
+
+EVEN_ROW_COLOR		= '#FFEEF0';		//	相場表の偶数行の色
+ODD_ROW_COLOR		= '#FFFFDD';		//	相場表の奇数行の色
+
+var kno=0;
+var hno=0;
+var kh = new Array();
+var km = new Array();
+var kt = new Array();
+var ko = new Array();
+var kl = new Array();
+var kn = new Array();
+var kb = new Array();
+var kv = new Array();
+var gn = new Array();
+var gt = new Array();
+
+var kaisenT = new Array();
+var knenT   = new Array();
+var ktukiT  = new Array();
+var khiT    = new Array();
+var snenT   = new Array();
+var stukiT  = new Array();
+var shiT    = new Array();
+var sjiT    = new Array();
+var stypeT  = new Array();
+var shunT   = new Array();
+var syoubiT = new Array();
+var jnenT   = new Array();
+var jtukiT  = new Array();
+var jhiT    = new Array();
+var knoT    = new Array();
+var osusumeT = new Array();
+var hanbai1T = new Array();
+var hanbai2T = new Array();
+var hanbai3T = new Array();
+var headerT  = new Array();
+var Zaiko16 = new Array();
+
+var kaisen;
+var kaisen2;
+var simenichi;
+var simejihun;
+var uketukebi;
+var snen, stuki, shi, sji, shun;
+var souba;
+var comment1, comment2;
+var sousinflag = false;
+var mt = new Array(3);
+	mt[0] = "　";
+	mt[1] = "◎";
+	mt[2] = "○";
+
+kkv = new Array();
+
+//-->
+</SCRIPT>
+
+<SCRIPT language="JavaScript" src="../Cookie.js?20220711-4A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"></SCRIPT>
+<SCRIPT language="JavaScript" src="./js/KSouba16A.js?20220711-4A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"></SCRIPT>
+<SCRIPT language="JavaScript" src="./js/KSouba16B.js?20220711-4A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"></SCRIPT>
+<SCRIPT language="JavaScript" src="./js/Zaiko16.js?20220711-4A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"></SCRIPT>
+<SCRIPT language="JavaScript" src="simeCheck.js?20220711-4A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"></SCRIPT>
+<SCRIPT language="JavaScript">
+
+	kno = knoT[kaisen];
+	if ( kaisen < 10 ) kaisen2 = "0" + kaisen; 
+	else               kaisen2 = kaisen; 
+	simenichi = stukiT[kaisen] + "月" + shiT[kaisen] + "日";
+	simejihun = sjiT[kaisen] + "時" + shunT[kaisen] + "分";
+	uketukebi = ktukiT[kaisen] + "月" + khiT[kaisen] + "日";
+	snen = snenT[kaisen];
+	stuki = stukiT[kaisen];
+	shi = shiT[kaisen];
+	sji = sjiT[kaisen];
+	shun = shunT[kaisen];
+//-->
+</SCRIPT>
+
+<SCRIPT language="JavaScript" src="./js/KGazou16.js?20220711-4A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"></SCRIPT>
+<SCRIPT language="JavaScript" src="CGIKHeaderG.js?20220711-4A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"></SCRIPT>
+<SCRIPT language="JavaScript" src="CGIKValidation.js?20220711-4A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"></SCRIPT>
+<SCRIPT language="JavaScript">
+
+function DataInput()
+{
+	var name, tel, mailaddr, tname, taddr, ttel, mailaddrk;
+    var recipient, subject;
+
+    name = getCookie( "Name" );
+    tel = getCookie( "Tel" );
+    mailaddr = getCookie( "Email" );
+    tname = getCookie( "TName" );
+    taddr = getCookie( "TAddr" );
+    ttel = getCookie( "TTel" );
+    mailaddrk = getCookie( "MailK" );
+    
+    recipient = kaisen + "kaisen@bigflower.co.jp";
+//	subject = kaisen + " Kaisen Order";
+//alert( "order=" + recipient + ", subject =" + subject );
+	document.write( '<input type=hidden name="recipient" value="' + recipient + '">' );
+	document.write( '<input type=hidden name="subject" value="１６Ｋａｉｓｅｎ【店頭受取予約販売②：インターネット通信販売】">' );
+	document.write( '<input type=hidden name="syurui" value="' + kaisen + '">' );
+	document.write( '<input type=hidden name="store" value="">' );	
+	document.write( '<input type=hidden name="bangou" value="0">' );
+	document.write( '<input type=hidden name="order" value="">' );
+	document.write( '<input type=hidden name="env_report" value="REMOTE_HOST,HTTP_USER_AGENT">' );
+	document.write( '<input type=hidden name="return_link_url" value="//www.bigflower.co.jp/">' );
+	document.write( '<input type=hidden name="return_link_title" value="ホームページに戻る">' );
+	document.write( '<input type=hidden name="title" value="ご注文ありがとうございました。">' );
+	document.write( '<input type=hidden name="required" value="Name,Phone,email">' );
+	document.write( '<input type=hidden name="print_config" value="subject,Name,Phone,email,mailaddrk,todoName,todoAddr,todoPhone,comment,store,data">' );
+	document.write( "<table border=0 cellpadding=7 CELLSPACING=1 width=500><tr>" );
+	document.write( '<td><FONT COLOR=blue SIZE=5>氏　名</td><TD><INPUT NAME="Name" TYPE="TEXT" SIZE=30 value=' + name + '>　(必須)</FONT></TD></tr>' );
+	document.write( '<tr><td><FONT COLOR=blue SIZE=5>電話番号</td><TD><INPUT NAME="Phone" TYPE="TEXT" SIZE=30 value=' + tel + '>　(必須・半角)</FONT></TD></tr>' );
+	document.write( '<tr><td><FONT COLOR=blue SIZE=5>メールアドレス</td><TD><INPUT NAME="email" TYPE="TEXT" SIZE=30 value=' + mailaddr + '>　(必須・半角)</FONT></TD></tr>' );
+	document.write( '<tr><td><FONT COLOR=blue SIZE=5>携帯アドレス</td><TD><INPUT NAME="mailaddrk" TYPE="TEXT" SIZE=30 value=' + mailaddrk + '></FONT></TD></tr>' );
+	document.write( "</table>" );
+	document.write( "ご注文後、代品・欠品情報など緊急なお知らせがある場合があります。<BR>リアルタイムで情報交換できますので携帯をお持ちのお客様は<BR>是非携帯アドレスをご入力下さい。<BR>尚転送設定をされている場合、携帯アドレスは必要ありません<BR>" );
+    document.write( "<FONT COLOR=magenta SIZE=4>ご注意：メールアドレスを間違えると返信メールを送れません。<BR></FONT>");
+	document.write( '<FONT SIZE=4 COLOR=blue> コメントをどうぞ　<textarea name="comment" rows=5 cols=50></textarea>' );
+	document.write( "<BR></FONT>" );
+	document.write( '<P ALIGN="center">' );
+	document.write( '<input type="hidden" name="data">' );
+	document.write( '<hr><center>' );
+	document.write( '<TABLE><TR><TD colspan="2" bgcolor="#ffcc99" align="center">' );
+	document.write( 'こちらの販売は店頭受け取りとなります。</TD></TR>' );
+	document.write( '<TR><TD>お受け取り店舗をご選択ください</TD>' );
+	document.write( '<TD><input type=radio value=環八荻窪店 name=receipt>環八荻窪店　　　' );
+	document.write( '<input type=radio value=永福店 name=receipt>永福店</TD>' );
+	document.write( '<TR><TD colspan="2" bgcolor="#ffcc99" align="center">ご注文時の注意点</TD></TR>' );
+	document.write( '<TR><TD colspan="2">' );
+	document.write( '・必ず' + uketori + '夕方頃ご来店・お受け取りください。<BR>' );
+	document.write( '・いかなる場合でも返品・キャンセル・変更は一切致しません。<BR>' );
+	document.write( '・当店で購入経験のある方のみの販売となります。<BR>' );
+	document.write( '・過去に利用したことがあり、入会している方のみご利用になれます。' );
+	document.write( '</TD></TR><TR><TD colspan="2" bgcolor="#ffcc99" align="center">' );
+	document.write( '上記注意点にご了承頂いた方のみの販売となります。<BR>' );
+	document.write( 'ご了承頂いた方はチェックを入れてください<BR>' );
+	document.write( '</TD></TR>' );
+	document.write( '<TR><TD colspan="2" align="center"><input type=checkbox value=ご了承 name=ok>了承した</TD></TR>' );
+	document.write( '</TABLE>' );
+	document.write( '<input type="SUBMIT" value="注文" onClick="return validation()">　　' );
+	document.write( '<input type="RESET" value="リセット">' );
+	document.write( "</center><BR>" );
+}
+
+//********************************************************
+
+function TableDispG()
+{
+	var i, gmark;
+	var hinmei, i01, c, aFlag = 0;
+	var toukyu;
+	var rowColor;
+
+	document.write( '<FORM METHOD="POST" ACTION="../buyer/formmailNetZ.cgi">' );
+	document.write( '<TR BGCOLOR="#FF9966"><TD colspan="8"><FONT SIZE="-1">！！商品は注文後すぐに確保され、注文遅れなければ欠品無く揃いやすいです。<BR>更新後すぐにご利用ください。遅れますと欠品の原因になります</FONT></TD></TR>' );
+	document.write( '<TR BGCOLOR="#FF9966"><TD colspan="8"><FONT SIZE="-1">！！商品はバイヤーの手を通らず、商品選択に当社の責任が全くありません。<BR>１００％ご自身の責任でご利用ください。当社は一切責任を負いません。</FONT></TD></TR>' );
+	for ( i = 0; i < kno; i++ )
+	{
+		//	商品が偶数かどうかチェックし,偶数か奇数かによって行の色を分ける
+		if ( i % 2 == 0)
+			rowColor = EVEN_ROW_COLOR;
+		else
+			rowColor = ODD_ROW_COLOR;
+
+//		if ( kh[i].indexOf( "＄", 0 ) < 0 )
+//		{
+			if ( kh[i].indexOf( "〃", 0 ) < 0 )
+			{	
+				i01 = 0;
+				c = kh[i].charAt(0);
+				if ( c == "＄" || c == "＠" || c == "＃" ) i01 = 1;
+				hinmei = kh[i].substr(i01);
+			}
+//		}
+		if ( ko[i] != "〃" )
+		{
+			toukyu = ko[i];
+		}
+		if ( aFlag == 1 )
+		{
+			aFlag = 0;
+			if ( kh[i].indexOf( "＄", 0 ) < 0 )
+			{
+				if ( kh[i].indexOf( "〃", 0 ) >= 0 )
+					kh[i] = hinmei;
+				if ( ko[i].indexOf( "〃", 0 ) >= 0 )
+					ko[i] = toukyu;
+			}  
+		}
+		if ( Zaiko16[i] == 0 )
+		{
+			kh[i] = "＄" + kh[i];
+		}
+		if ( kh[i].charAt(0) == "＄" )
+		{
+			aFlag = 1;
+			kh[i] = "完売しました。";
+//			km[i] = "ありがとうございました。";
+			kt[i] = "-";
+			ko[i] = "-";
+			kl[i] = "-";
+//			kb[i] = "注文できません。";
+		}
+		if ( kh[i].charAt(0) == "＠" )
+		{
+			kh[i] = kh[i].substr(1);
+			kt[i] = "-";
+			ko[i] = "-";
+			kl[i] = "-";
+//			kb[i] = "注文できません。";
+			rowColor = "#FF9966";
+		}
+		if ( kh[i].charAt(0) == "＃" )
+		{
+			kh[i] = kh[i].substr(1);
+		}
+		document.write( "<TR BGCOLOR=" + rowColor +" VALIGN=bottom>" );
+
+		if ( kh[i].length > 8 )
+			document.write( "<TD ALIGN=left><FONT SIZE=-1>" + kh[i] + "</FONT></TD>" );
+		else
+			document.write( "<TD ALIGN=left><FONT SIZE=+0>" + kh[i] + "</FONT></TD>" );
+		if ( km[i].length > 8 )
+			document.write( "<TD ALIGN=center><FONT SIZE=-1>" + km[i] + "</FONT></TD>");
+		else
+			document.write( "<TD ALIGN=center><FONT SIZE=+0>" + km[i] + "</FONT></TD>");
+		document.write( "<TD ALIGN=right><FONT SIZE=+1>" + kt[i] + "</FONT></TD>");
+		document.write( "<TD ALIGN=center><FONT SIZE=+1>" + ko[i] + "</FONT></TD>" );
+		document.write( "<TD ALIGN=center><FONT SIZE=+1>" + kl[i] + "</FONT></TD>" );
+		document.write( '<TD ALIGN=right><FONT SIZE=+0><input type=text size=4 name="k"  onChange="lotcheck(' + i + ');">' + kn[i] + "</FONT></TD>" );
+		document.write( "<TD ALIGN=center><FONT SIZE=+1>" + kb[i] + "</FONT></TD>" );
+
+		if ( gnt[i*2+1] == "" ) gmark = " ";
+		else            		gmark = mt[gnt[i*2+1]];
+		if ( gnt[i*2+1] == 1 )
+		{
+			document.write( '<TD ALIGN=center><FONT SIZE=+1><INPUT TYPE=button value="' + gmark + '" onClick="gazou(' + "'" + kh[i] + "','" + gnt[i*2] + "'," + gnt[i*2+1] + ')";></FONT></TD>' );
+
+		}
+		else if ( gnt[i*2+1] == 2 )
+		{
+			document.write( '<TD ALIGN=center><FONT SIZE=+1><INPUT TYPE=button value="' + gmark + '" onClick="gazou(' + "'" + kh[i] + "','" + gnt[i*2] + "'," + gnt[i*2+1] + ')";></FONT></TD>' );
+		}
+		else
+		{
+			document.write( "<TD ALIGN=center><FONT SIZE=+1>" + gmark + "</FONT></TD>" );
+		}
+		document.write( "</TR>" );
+	}
+//	document.write( "</FORM>" );
+	document.write( '<TR BGCOLOR="#FF9966"><TD colspan="8"><FONT SIZE="-1">当然ですが買い付けは自己責任です。ご自身で選んだ商品はご自身で責任を持ってください。<BR>どんな理由があっても返品、クレーム、アフターサービスは出来ません。品質が心配であれば輸入ではなく、国産の一番高い最上位等級をご利用ください。このページのご利用はある程度知識のある方を対象としております。知識の乏しい方はご利用をご遠慮ください。</FONT></TD></TR>' );
+	document.write( '<TR BGCOLOR="#FF9966"><TD colspan="8"><FONT SIZE="-1">当方はお注文のあった商品を当方の意思なく買い付け作業するだけです。<BR>ご自身で買った商品はいかなる場合でも１００％ご自身で責任を持ってお受け取りください。</FONT></TD></TR>' );
+	document.write( '<TR BGCOLOR="#FF9966"><TD colspan="8"><FONT SIZE="-1">ルールを守って頂けない方のご利用はお断りします。<BR>すぐに発注作業を行いますので、注文後のキャンセル、変更はできません。商品到着後の返品、クレームなども当然できません。</FONT></TD></TR>' );
+	document.write( "</TABLE>" );
+//	document.write( "<BR><CENTER>" + comment1 + "<BR></CENTER>" );
+//	document.write( "<center><p>" + comment2 + "</p></center><BR>" );
+	document.write( "<center><p>仕入れ代行サービス、情報更新お知らせサービス始めました。<BR><BR>" );
+	document.write( "こちらの販売は店頭で手に入りにくい商品もネット販売で購入することができます。<BR>" );
+	document.write( "店頭でのお受け取りとなりますので来店時は店頭販売の商品と一緒にご利用ください。<BR>" );
+	document.write( "店頭受け取り箱のまま渡しのみとなります。配送、加工は致しません。<BR>" );
+	document.write( "ご注文後は必ずご指定の店頭にお越しください。<BR>" );
+	document.write( "お会計は店頭でお願いします。<BR>" );
+
+	document.write( "</p></center><BR><hr><BR>" );
+}
+//-->
+</SCRIPT>
+<body BGCOLOR="#FFFFDD"  >
+<SCRIPT langage="JavaScript">
+
+	headerG();
+	TableDispG();
+	DataInput();
+function checkKey()
+{
+	if ( event.keyCode == 13 )
+	{
+		document.forms[0].focus();
+		alert( "まだ注文するデータがある場合は次の画面で「キャンセル」をクリックして\n注文入力に戻って下さい。\nEnterキーを押すと注文ボタンをクリックしたのと同じことになります。\n別の入力項目に移るにはTABキーを押すかマウスで移動してください。\n" );
+	}
+}
+window.document.onkeydown = checkKey;
+//-->
+</SCRIPT>
+</body>
+<P align="center"><A href="//www.bigflower.co.jp/index.html"><IMG src="//www.bigflower.co.jp/fram2.gif" width="112" height="30" border="0"></A><A href="//www.bigflower.co.jp/v/index.html"><IMG src="//www.bigflower.co.jp/fram3.gif" width="117" height="30" border="0"></A><A href="//www.bigflower.co.jp/v/v-ez.htm"><IMG src="//www.bigflower.co.jp/fram4.gif" width="117" height="30" border="0"></A><A href="//www.bigflower.co.jp/H/index.htm"><IMG src="//www.bigflower.co.jp/fram5.gif" width="117" height="30" border="0"></A><A href="//www.bigflower.co.jp/sizai/index.htm"><IMG src="//www.bigflower.co.jp/fram6.gif" width="117" height="30" border="0"></A><A href="//www.bigflower.co.jp/chuui.htm"><IMG src="//www.bigflower.co.jp/fram7.gif" width="117" height="30" border="0"></A></P>
+</html>

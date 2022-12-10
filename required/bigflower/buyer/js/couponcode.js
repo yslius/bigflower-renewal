@@ -1,0 +1,12 @@
+codeT[  1 ] = "2201ouzo";
+codeT[  2 ] = "2202ofqo";
+codeT[  3 ] = "2203oazo";
+codeT[  4 ] = "2204oipo";
+codeT[  5 ] = "2205odko";
+codeT[  6 ] = "2206qxjq";
+codeT[  7 ] = "2107oxho";
+codeT[  8 ] = "2108omro";
+codeT[  9 ] = "2109owyo";
+codeT[ 10 ] = "2110tbdt";
+codeT[ 11 ] = "2111jpmj";
+codeT[ 12 ] = "2112pssp";

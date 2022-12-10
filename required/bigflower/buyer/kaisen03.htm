@@ -1,0 +1,586 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv='expires' content=''>
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<title>・ｽﾘ花　・ｽ・ｽ・ｽ・ｽ\・ｽ・ｽ・ｽ@03・ｽ・ｽ・ｽ</title>
+</head>
+
+<SCRIPT language="JavaScript" src="../frame.js?na20220711ab"></SCRIPT>
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv='expires' content=''>
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<title>蛻・干縲逶ｸ蝣ｴ陦ｨ遉ｺ縲03蝗樊姶</title>
+</head>
+
+<SCRIPT language="JavaScript" src="../frame.js?na20220711ab"></SCRIPT>
+<SCRIPT language="JavaScript">
+
+	frame();
+
+// -->
+</SCRIPT>
+<SCRIPT langage="JavaScript">
+
+EVEN_ROW_COLOR		= '#FFEEF0';		//	逶ｸ蝣ｴ陦ｨ縺ｮ蛛ｶ謨ｰ陦後・濶ｲ
+ODD_ROW_COLOR		= '#FFFFDD';		//	逶ｸ蝣ｴ陦ｨ縺ｮ螂・焚陦後・濶ｲ
+
+var kno=0;
+var hno=0;
+var kh = new Array();
+var km = new Array();
+var kt = new Array();
+var ko = new Array();
+var kl = new Array();
+var kn = new Array();
+var kb = new Array();
+var kv = new Array();
+var gn = new Array();
+var gt = new Array();
+
+var kaisenT = new Array();
+var knenT   = new Array();
+var ktukiT  = new Array();
+var khiT    = new Array();
+var snenT   = new Array();
+var stukiT  = new Array();
+var shiT    = new Array();
+var sjiT    = new Array();
+var stypeT  = new Array();
+var shunT   = new Array();
+var syoubiT = new Array();
+var jnenT   = new Array();
+var jtukiT  = new Array();
+var jhiT    = new Array();
+var knoT    = new Array();
+var osusumeT = new Array();
+var hanbai1T = new Array();
+var hanbai2T = new Array();
+var hanbai3T = new Array();
+var headerT  = new Array();
+var Zaiko03 = new Array();
+
+var IssueFlagT = new Array();
+var IssueT = new Array();
+var UseFlagT = new Array();
+var UseT = new Array();
+var couponT = new Array();
+var parT = new Array();
+var ennT = new Array();
+var word;
+var codeT = new Array();
+
+var kaisen;
+var kaisen2;
+var simenichi;
+var simejihun;
+var uketukebi;
+var snen, stuki, shi, sji, shun;
+var souba;
+var comment1, comment2;
+var sousinflag = false;
+var mt = new Array(3);
+	mt[0] = "縲";
+	mt[1] = "笳・";
+	mt[2] = "笳・";
+
+kkv = new Array();
+
+//-->
+</SCRIPT>
+
+<SCRIPT language="JavaScript" src="../Cookie.js?na20220711ab"></SCRIPT>
+<SCRIPT language="JavaScript" src="./js/KSouba03A.js?na20220711ab"></SCRIPT>
+<SCRIPT language="JavaScript" src="./js/KSouba03B.js?na20220711ab"></SCRIPT>
+<SCRIPT language="JavaScript" src="./js/Zaiko03.js?na20220711ab"></SCRIPT>
+<SCRIPT language="JavaScript" src="./js/couponcode.js?na20220711ab"></SCRIPT>
+<SCRIPT language="JavaScript" src="simeCheck.js?na20220711ab"></SCRIPT>
+<SCRIPT language="JavaScript">
+
+	kno = knoT[kaisen];
+	if ( kaisen < 10 ) kaisen2 = "0" + kaisen; 
+	else               kaisen2 = kaisen; 
+	simenichi = stukiT[kaisen] + "譛・ + shiT[kaisen]" + "譌･";
+	simejihun = sjiT[kaisen] + "譎・ + shunT[kaisen]" + "蛻・";
+	uketukebi = ktukiT[kaisen] + "譛・ + khiT[kaisen]" + "譌･";
+	snen = snenT[kaisen];
+	stuki = stukiT[kaisen];
+	shi = shiT[kaisen];
+	sji = sjiT[kaisen];
+	shun = shunT[kaisen];
+	stype = stypeT[kaisen];
+//-->
+</SCRIPT>
+
+<SCRIPT language="JavaScript" src="./js/KGazou03.js?na20220711ab"></SCRIPT>
+<SCRIPT language="JavaScript" src="CGIKHeaderG.js?na20220711ab"></SCRIPT>
+<SCRIPT language="JavaScript" src="CGIKValidation.js?na20220711ab"></SCRIPT>
+<SCRIPT language="JavaScript" src="CGIDataInput.js?na20220711ab"></SCRIPT>
+<SCRIPT language="JavaScript">
+
+
+function TableDispG()
+{
+	var i, gmark;
+	var hinmei, toukyu, i01, c, aFlag = 0;
+	var rowColor;
+
+	document.write( '<FORM METHOD="POST" ACTION="../buyer/formmailNetZ.cgi">' );
+	for ( i = 0; i < kno; i++ )
+	{
+		//	蝠・刀縺悟・謨ｰ縺九←縺・°繝√ぉ繝・け縺・蛛ｶ謨ｰ縺句･・焚縺九↓繧医▲縺ｦ陦後・濶ｲ繧貞・縺代ｋ
+		if ( i % 2 == 0)
+			rowColor = EVEN_ROW_COLOR;
+		else
+			rowColor = ODD_ROW_COLOR;
+
+//		if ( kh[i].indexOf( "・・, 0 ) < 0 )
+//		{
+			if ( kh[i].indexOf( "縲・", 0 ) < 0 )
+			{	
+				i01 = 0;
+				c = kh[i].charAt(0);
+				if ( c == "・・" || c == "・" || c == "・・" ) i01 = 1;
+				hinmei = kh[i].substr(i01);
+			}
+//		}
+		if ( ko[i] != "縲・" )
+		{
+			toukyu = ko[i];
+		}
+		if ( aFlag == 1 )
+		{
+			aFlag = 0;
+			if ( kh[i].indexOf( "・・", 0 ) < 0 )
+			{
+				if ( kh[i].indexOf( "縲・", 0 ) >= 0 )
+					kh[i] = hinmei;
+				if ( ko[i].indexOf( "縲・", 0 ) >= 0 )
+					ko[i] = toukyu;
+			}  
+		}
+		if ( Zaiko03[i] == 0 )
+		{
+			kh[i] = "・・" + kh[i];
+		}
+		if ( kh[i].charAt(0) == "・・" )
+		{
+			aFlag = 1;
+			kh[i] = "螳悟｣ｲ縺励∪縺励◆縲・";
+//			km[i] = "縺ゅｊ縺後→縺・＃縺悶＞縺ｾ縺励◆縲・;
+			kt[i] = "-";
+			ko[i] = "-";
+			kl[i] = "-";
+//			kb[i] = "豕ｨ譁・〒縺阪∪縺帙ｓ縲・;
+		}
+		if ( kh[i].charAt(0) == "・" )
+		{
+			kh[i] = kh[i].substr(1);
+			kt[i] = "-";
+			ko[i] = "-";
+			kl[i] = "-";
+//			kb[i] = "豕ｨ譁・〒縺阪∪縺帙ｓ縲・;
+			rowColor = "#FF9966";
+		}
+		if ( kh[i].charAt(0) == "・・" )
+		{
+			kh[i] = kh[i].substr(1);
+		}
+		document.write( "<TR BGCOLOR=" + rowColor +" VALIGN=bottom>" );
+
+		if ( kh[i].length > 8 )
+			document.write( "<TD ALIGN=center><FONT SIZE=-1>" + kh[i] + "</FONT></TD>" );
+		else
+			document.write( "<TD ALIGN=center><FONT SIZE=+0>" + kh[i] + "</FONT></TD>" );
+		if ( km[i].length > 8 )
+			document.write( "<TD ALIGN=center><FONT SIZE=-1>" + km[i] + "</FONT></TD>");
+		else
+			document.write( "<TD ALIGN=center><FONT SIZE=+0>" + km[i] + "</FONT></TD>");
+		document.write( "<TD ALIGN=right><FONT SIZE=+1>" + kt[i] + "</FONT></TD>");
+		document.write( "<TD ALIGN=center><FONT SIZE=+1>" + ko[i] + "</FONT></TD>" );
+		document.write( "<TD ALIGN=center><FONT SIZE=+1>" + kl[i] + "</FONT></TD>" );
+		document.write( '<TD ALIGN=right><FONT SIZE=+0><input type=text size=4 name="k"  onChange="lotcheck(' + i + ');">' + kn[i] + "</FONT></TD>" );
+		document.write( "<TD ALIGN=center><FONT SIZE=+1>" + kb[i] + "</FONT></TD>" );
+
+		if ( gnt[i*2+1] == "" ) gmark = " ";
+		else            		gmark = mt[gnt[i*2+1]];
+		if ( gnt[i*2+1] == 1 )
+		{
+			document.write( '<TD ALIGN=center><FONT SIZE=+1><INPUT TYPE=button value="' + gmark + '" onClick="gazou(' + "'" + kh[i] + "','" + gnt[i*2] + "'," + gnt[i*2+1] + ')";></FONT></TD>' );
+
+		}
+		else if ( gnt[i*2+1] == 2 )
+		{
+			document.write( '<TD ALIGN=center><FONT SIZE=+1><INPUT TYPE=button value="' + gmark + '" onClick="gazou(' + "'" + kh[i] + "','" + gnt[i*2] + "'," + gnt[i*2+1] + ')";></FONT></TD>' );
+		}
+		else
+		{
+			document.write( "<TD ALIGN=center><FONT SIZE=+1>" + gmark + "</FONT></TD>" );
+		}
+		document.write( "</TR>" );
+	}
+//	document.write( "</FORM>" );
+	document.write( "</TABLE>" );
+	document.write( "<BR><CENTER>" + comment1 + "<BR></CENTER>" );
+	document.write( "<center><p>" + comment2 + "</p></center><BR>" );
+	document.write( "<center><p>莉募・繧御ｻ｣陦後し繝ｼ繝薙せ縲∵ュ蝣ｱ譖ｴ譁ｰ縺顔衍繧峨○繧ｵ繝ｼ繝薙せ蟋九ａ縺ｾ縺励◆縲・/p></center><BR><hr><BR>" );
+}
+//-->
+</SCRIPT>
+<body onLoad="if(isIE) {ieblink();ieblink1();}" BGCOLOR="#FFFFDD" >
+<SCRIPT langage="JavaScript">
+
+	document.write( '<CENTER>' );
+    var isIE  = (navigator.appName.substring(0,9)=="Microsoft"); // IE蛻､螳・	
+	word = "";
+	if ( IssueFlagT[kaisen] == 1 )
+	{
+		word = word + "・奇ｼ雁宵莉・ + IssueT[kaisen]" + "蜀・ｻ･荳翫＃豕ｨ譁・・譁ｹ縺ｫ鄙梧怦菴ｿ縺医ｋ繧ｯ繝ｼ繝昴Φ繧ｳ繝ｼ繝臥匱陦御ｸｭ・奇ｼ・BR>";
+	}
+	if ( UseFlagT[kaisen] == 1 )
+	{
+		if ( couponT[kaisen] == 1 )
+			word1 = "騾∵侭辟｡譁・";
+		else if ( couponT[kaisen] == 2 )
+			word1 = "騾∵侭蜊企｡・";
+		else if ( couponT[kaisen] == 3 )
+			word1 = "騾∵侭" + parT[kaisen] + "蜑ｲ蠑・";
+		else if ( couponT[kaisen] == 4 )
+			word1 = "・・" + ennT[kaisen] + "蜀・鈴・騾∝区焚・峨ｒ騾∵侭縺九ｉ蟾ｮ縺怜ｼ輔″";
+		word2 = "蜿ｪ莉翫∫ｨ取栢縺・ + UseT[kaisen]" + "蜀・ｻ･荳翫♀雋ｷ縺・≠縺偵・譁ｹ縺ｯ蜈域怦逋ｺ陦後・繧ｯ繝ｼ繝昴Φ繧ｳ繝ｼ繝峨＃蛻ｩ逕ｨ蜿ｯ閭ｽ<BR>繧ｯ繝ｼ繝昴Φ繧ｳ繝ｼ繝牙・蜉帙〒" + word1;
+		word = word + word2;
+	}
+	document.write( '<SPAN ID="new" STYLE="color:#FF0000"><BLINK>' + word + '</BLINK></SPAN><BR>');
+	document.write( '</CENTER>' );
+
+// 譁・ｭ礼せ貊・畑螳夂ｾｩ
+var count = 0;         // 繧ｫ繧ｦ繝ｳ繧ｿ
+var count1 = 0;         // 繧ｫ繧ｦ繝ｳ繧ｿ
+var timer = 700;       // 繧ｿ繧､繝槭・
+var col = new Array(); // 濶ｲ謖・ｮ夐・蛻・col[0] = "#FFFFF0";    // 濶ｲ謖・ｮ夲ｼ郁レ譎ｯ濶ｲ・・col[1] = "#FF0000";    // 濶ｲ謖・ｮ夲ｼ域枚蟄苓｡ｨ遉ｺ濶ｲ・・
+// 轤ｹ貊・未謨ｰ
+function ieblink(){
+    document.all["new"].style.color = col[count]; // 濶ｲ縺ｮ螟画峩
+    if(count==1) count=0;                         // 繧ｫ繧ｦ繝ｳ繧ｿ險ｭ螳・    else         ++count;                         // 繧ｫ繧ｦ繝ｳ繧ｿ險ｭ螳・    setTimeout("ieblink()",timer);                // 繧ｿ繧､繝槭・險ｭ螳・}
+}
+// 轤ｹ貊・未謨ｰ1
+function ieblink1(){
+    document.all["new1"].style.color = col[count]; // 濶ｲ縺ｮ螟画峩
+    if(count1==1) count1=0;                         // 繧ｫ繧ｦ繝ｳ繧ｿ險ｭ螳・    else         ++count1;                         // 繧ｫ繧ｦ繝ｳ繧ｿ險ｭ螳・    setTimeout("ieblink1()",timer);                // 繧ｿ繧､繝槭・險ｭ螳・}
+
+	headerG();
+	TableDispG();
+	DataInput();
+}
+function checkKey()
+{
+	if ( event.keyCode == 13 )
+	{
+		document.forms[0].focus();
+		alert( "縺ｾ縺豕ｨ譁・☆繧九ョ繝ｼ繧ｿ縺後≠繧句ｴ蜷医・谺｡縺ｮ逕ｻ髱｢縺ｧ縲後く繝｣繝ｳ繧ｻ繝ｫ縲阪ｒ繧ｯ繝ｪ繝・け縺励※\n豕ｨ譁・・蜉帙↓謌ｻ縺｣縺ｦ荳九＆縺・・nEnter繧ｭ繝ｼ繧呈款縺吶→豕ｨ譁・・繧ｿ繝ｳ繧偵け繝ｪ繝・け縺励◆縺ｮ縺ｨ蜷後§縺薙→縺ｫ縺ｪ繧翫∪縺吶・n蛻･縺ｮ蜈･蜉幃・岼縺ｫ遘ｻ繧九↓縺ｯTAB繧ｭ繝ｼ繧呈款縺吶°繝槭え繧ｹ縺ｧ遘ｻ蜍輔＠縺ｦ縺上□縺輔＞縲・n" );
+	}
+}
+window.document.onkeydown = checkKey;
+//-->
+</SCRIPT>
+</body>
+<P align="center"><A href="//www.bigflower.co.jp/index.html"><IMG src="//www.bigflower.co.jp/fram2.gif" width="112" height="30" border="0"></A><A href="//www.bigflower.co.jp/v/index.html"><IMG src="//www.bigflower.co.jp/fram3.gif" width="117" height="30" border="0"></A><A href="//www.bigflower.co.jp/v/v-ez.htm"><IMG src="//www.bigflower.co.jp/fram4.gif" width="117" height="30" border="0"></A><A href="//www.bigflower.co.jp/H/index.htm"><IMG src="//www.bigflower.co.jp/fram5.gif" width="117" height="30" border="0"></A><A href="//www.bigflower.co.jp/sizai/index.htm"><IMG src="//www.bigflower.co.jp/fram6.gif" width="117" height="30" border="0"></A><A href="//www.bigflower.co.jp/chuui.htm"><IMG src="//www.bigflower.co.jp/fram7.gif" width="117" height="30" border="0"></A></P>
+</html>
+
+
+
+
+
+
+
+
+"></SCRIPT>
+<SCRIPT language="JavaScript">
+
+	frame();
+
+//-->
+</SCRIPT>
+<SCRIPT langage="JavaScript">
+
+EVEN_ROW_COLOR		= '#FFEEF0';		//	・ｽ・ｽ・ｽ・ｽ\・ｽﾌ具ｿｽ・ｽ・ｽ・ｽs・ｽﾌ色
+ODD_ROW_COLOR		= '#FFFFDD';		//	・ｽ・ｽ・ｽ・ｽ\・ｽﾌ奇数・ｽs・ｽﾌ色
+
+var kno=0;
+var hno=0;
+var kh = new Array();
+var km = new Array();
+var kt = new Array();
+var ko = new Array();
+var kl = new Array();
+var kn = new Array();
+var kb = new Array();
+var kv = new Array();
+var gn = new Array();
+var gt = new Array();
+
+var kaisenT = new Array();
+var knenT   = new Array();
+var ktukiT  = new Array();
+var khiT    = new Array();
+var snenT   = new Array();
+var stukiT  = new Array();
+var shiT    = new Array();
+var sjiT    = new Array();
+var stypeT  = new Array();
+var shunT   = new Array();
+var syoubiT = new Array();
+var jnenT   = new Array();
+var jtukiT  = new Array();
+var jhiT    = new Array();
+var knoT    = new Array();
+var osusumeT = new Array();
+var hanbai1T = new Array();
+var hanbai2T = new Array();
+var hanbai3T = new Array();
+var headerT  = new Array();
+var Zaiko03 = new Array();
+
+var IssueFlagT = new Array();
+var IssueT = new Array();
+var UseFlagT = new Array();
+var UseT = new Array();
+var couponT = new Array();
+var parT = new Array();
+var ennT = new Array();
+var word;
+var codeT = new Array();
+
+var kaisen;
+var kaisen2;
+var simenichi;
+var simejihun;
+var uketukebi;
+var snen, stuki, shi, sji, shun;
+var souba;
+var comment1, comment2;
+var sousinflag = false;
+var mt = new Array(3);
+	mt[0] = "・ｽ@";
+	mt[1] = "・ｽ・ｽ";
+	mt[2] = "・ｽ・ｽ";
+
+kkv = new Array();
+
+//-->
+</SCRIPT>
+
+<SCRIPT language="JavaScript" src="../Cookie.js?na20220711ab"></SCRIPT>
+<SCRIPT language="JavaScript" src="./js/KSouba03A.js?na20220711ab"></SCRIPT>
+<SCRIPT language="JavaScript" src="./js/KSouba03B.js?na20220711ab"></SCRIPT>
+<SCRIPT language="JavaScript" src="./js/Zaiko03.js?na20220711ab"></SCRIPT>
+<SCRIPT language="JavaScript" src="./js/couponcode.js?na20220711ab"></SCRIPT>
+<SCRIPT language="JavaScript" src="simeCheck.js?na20220711ab"></SCRIPT>
+<SCRIPT language="JavaScript">
+
+	kno = knoT[kaisen];
+	if ( kaisen < 10 ) kaisen2 = "0" + kaisen; 
+	else               kaisen2 = kaisen; 
+	simenichi = stukiT[kaisen] + "・ｽ・ｽ" + shiT[kaisen] + "・ｽ・ｽ";
+	simejihun = sjiT[kaisen] + "・ｽ・ｽ" + shunT[kaisen] + "・ｽ・ｽ";
+	uketukebi = ktukiT[kaisen] + "・ｽ・ｽ" + khiT[kaisen] + "・ｽ・ｽ";
+	snen = snenT[kaisen];
+	stuki = stukiT[kaisen];
+	shi = shiT[kaisen];
+	sji = sjiT[kaisen];
+	shun = shunT[kaisen];
+	stype = stypeT[kaisen];
+//-->
+</SCRIPT>
+
+<SCRIPT language="JavaScript" src="./js/KGazou03.js?na20220711ab"></SCRIPT>
+<SCRIPT language="JavaScript" src="CGIKHeaderG.js?na20220711ab"></SCRIPT>
+<SCRIPT language="JavaScript" src="CGIKValidation.js?na20220711ab"></SCRIPT>
+<SCRIPT language="JavaScript" src="CGIDataInput.js?na20220711ab"></SCRIPT>
+<SCRIPT language="JavaScript">
+
+
+function TableDispG()
+{
+	var i, gmark;
+	var hinmei, toukyu, i01, c, aFlag = 0;
+	var rowColor;
+
+	document.write( '<FORM METHOD="POST" ACTION="../buyer/formmailNetZ.cgi">' );
+	for ( i = 0; i < kno; i++ )
+	{
+		//	・ｽ・ｽ・ｽi・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ・ｽﾇゑｿｽ・ｽ・ｽ・ｽ`・ｽF・ｽb・ｽN・ｽ・ｽ,・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ・費ｿｽ・ｽ・ｽﾉゑｿｽ・ｽ・ｽﾄ行・ｽﾌ色・ｽｪゑｿｽ・ｽ・ｽ
+		if ( i % 2 == 0)
+			rowColor = EVEN_ROW_COLOR;
+		else
+			rowColor = ODD_ROW_COLOR;
+
+//		if ( kh[i].indexOf( "・ｽ・ｽ", 0 ) < 0 )
+//		{
+			if ( kh[i].indexOf( "・ｽV", 0 ) < 0 )
+			{	
+				i01 = 0;
+				c = kh[i].charAt(0);
+				if ( c == "・ｽ・ｽ" || c == "・ｽ・ｽ" || c == "・ｽ・ｽ" ) i01 = 1;
+				hinmei = kh[i].substr(i01);
+			}
+//		}
+		if ( ko[i] != "・ｽV" )
+		{
+			toukyu = ko[i];
+		}
+		if ( aFlag == 1 )
+		{
+			aFlag = 0;
+			if ( kh[i].indexOf( "・ｽ・ｽ", 0 ) < 0 )
+			{
+				if ( kh[i].indexOf( "・ｽV", 0 ) >= 0 )
+					kh[i] = hinmei;
+				if ( ko[i].indexOf( "・ｽV", 0 ) >= 0 )
+					ko[i] = toukyu;
+			}  
+		}
+		if ( Zaiko03[i] == 0 )
+		{
+			kh[i] = "・ｽ・ｽ" + kh[i];
+		}
+		if ( kh[i].charAt(0) == "・ｽ・ｽ" )
+		{
+			aFlag = 1;
+			kh[i] = "・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ・ｽﾜゑｿｽ・ｽ・ｽ・ｽB";
+//			km[i] = "・ｽ・ｽ・ｽ閧ｪ・ｽﾆゑｿｽ・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ・ｽﾜゑｿｽ・ｽ・ｽ・ｽB";
+			kt[i] = "-";
+			ko[i] = "-";
+			kl[i] = "-";
+//			kb[i] = "・ｽ・ｽ・ｽ・ｽ・ｽﾅゑｿｽ・ｽﾜゑｿｽ・ｽ・ｽB";
+		}
+		if ( kh[i].charAt(0) == "・ｽ・ｽ" )
+		{
+			kh[i] = kh[i].substr(1);
+			kt[i] = "-";
+			ko[i] = "-";
+			kl[i] = "-";
+//			kb[i] = "・ｽ・ｽ・ｽ・ｽ・ｽﾅゑｿｽ・ｽﾜゑｿｽ・ｽ・ｽB";
+			rowColor = "#FF9966";
+		}
+		if ( kh[i].charAt(0) == "・ｽ・ｽ" )
+		{
+			kh[i] = kh[i].substr(1);
+		}
+		document.write( "<TR BGCOLOR=" + rowColor +" VALIGN=bottom>" );
+
+		if ( kh[i].length > 8 )
+			document.write( "<TD ALIGN=center><FONT SIZE=-1>" + kh[i] + "</FONT></TD>" );
+		else
+			document.write( "<TD ALIGN=center><FONT SIZE=+0>" + kh[i] + "</FONT></TD>" );
+		if ( km[i].length > 8 )
+			document.write( "<TD ALIGN=center><FONT SIZE=-1>" + km[i] + "</FONT></TD>");
+		else
+			document.write( "<TD ALIGN=center><FONT SIZE=+0>" + km[i] + "</FONT></TD>");
+		document.write( "<TD ALIGN=right><FONT SIZE=+1>" + kt[i] + "</FONT></TD>");
+		document.write( "<TD ALIGN=center><FONT SIZE=+1>" + ko[i] + "</FONT></TD>" );
+		document.write( "<TD ALIGN=center><FONT SIZE=+1>" + kl[i] + "</FONT></TD>" );
+		document.write( '<TD ALIGN=right><FONT SIZE=+0><input type=text size=4 name="k"  onChange="lotcheck(' + i + ');">' + kn[i] + "</FONT></TD>" );
+		document.write( "<TD ALIGN=center><FONT SIZE=+1>" + kb[i] + "</FONT></TD>" );
+
+		if ( gnt[i*2+1] == "" ) gmark = " ";
+		else            		gmark = mt[gnt[i*2+1]];
+		if ( gnt[i*2+1] == 1 )
+		{
+			document.write( '<TD ALIGN=center><FONT SIZE=+1><INPUT TYPE=button value="' + gmark + '" onClick="gazou(' + "'" + kh[i] + "','" + gnt[i*2] + "'," + gnt[i*2+1] + ')";></FONT></TD>' );
+
+		}
+		else if ( gnt[i*2+1] == 2 )
+		{
+			document.write( '<TD ALIGN=center><FONT SIZE=+1><INPUT TYPE=button value="' + gmark + '" onClick="gazou(' + "'" + kh[i] + "','" + gnt[i*2] + "'," + gnt[i*2+1] + ')";></FONT></TD>' );
+		}
+		else
+		{
+			document.write( "<TD ALIGN=center><FONT SIZE=+1>" + gmark + "</FONT></TD>" );
+		}
+		document.write( "</TR>" );
+	}
+//	document.write( "</FORM>" );
+	document.write( "</TABLE>" );
+	document.write( "<BR><CENTER>" + comment1 + "<BR></CENTER>" );
+	document.write( "<center><p>" + comment2 + "</p></center><BR>" );
+	document.write( "<center><p>・ｽd・ｽ・ｽ・ｽ・ｽ・ｽs・ｽT・ｽ[・ｽr・ｽX・ｽA・ｽ・ｽ・ｽX・ｽV・ｽ・ｽ・ｽm・ｽ轤ｹ・ｽT・ｽ[・ｽr・ｽX・ｽn・ｽﾟまゑｿｽ・ｽ・ｽ・ｽB</p></center><BR><hr><BR>" );
+}
+//-->
+</SCRIPT>
+<body onLoad="if(isIE) {ieblink();ieblink1();}" BGCOLOR="#FFFFDD" >
+<SCRIPT langage="JavaScript">
+
+	document.write( '<CENTER>' );
+    var isIE  = (navigator.appName.substring(0,9)=="Microsoft"); // IE・ｽ・ｽ・ｽ・ｽ
+	
+	word = "";
+	if ( IssueFlagT[kaisen] == 1 )
+	{
+		word = word + "・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ" + IssueT[kaisen] + "・ｽ~・ｽﾈ上ご・ｽ・ｽ・ｽ・ｽ・ｽﾌ包ｿｽ・ｽﾉ暦ｿｽ・ｽ・ｽ・ｽg・ｽ・ｽ・ｽ・ｽN・ｽ[・ｽ|・ｽ・ｽ・ｽR・ｽ[・ｽh・ｽ・ｽ・ｽs・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ<BR>";
+	}
+	if ( UseFlagT[kaisen] == 1 )
+	{
+		if ( couponT[kaisen] == 1 )
+			word1 = "・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ";
+		else if ( couponT[kaisen] == 2 )
+			word1 = "・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ・ｽz";
+		else if ( couponT[kaisen] == 3 )
+			word1 = "・ｽ・ｽ・ｽ・ｽ" + parT[kaisen] + "・ｽ・ｽ・ｽ・ｽ";
+		else if ( couponT[kaisen] == 4 )
+			word1 = "・ｽi" + ennT[kaisen] + "・ｽ~・ｽ~・ｽz・ｽ・ｽ・ｽﾂ撰ｿｽ・ｽj・ｽ覧・ｽ・ｽ・ｽ・ｽ迯ｷ・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ";
+		word2 = "・ｽ・ｽ・ｽ・ｽ・ｽA・ｽﾅ費ｿｽ・ｽ・ｽ" + UseT[kaisen] + "・ｽ~・ｽﾈ上お・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ・ｽﾌ包ｿｽ・ｽﾍ先月・ｽ・ｽ・ｽs・ｽﾌク・ｽ[・ｽ|・ｽ・ｽ・ｽR・ｽ[・ｽh・ｽ・ｽ・ｽ・ｽ・ｽp・ｽﾂ能<BR>・ｽN・ｽ[・ｽ|・ｽ・ｽ・ｽR・ｽ[・ｽh・ｽ・ｽ・ｽﾍゑｿｽ" + word1;
+		word = word + word2;
+	}
+	document.write( '<SPAN ID="new" STYLE="color:#FF0000"><BLINK>' + word + '</BLINK></SPAN><BR>');
+	document.write( '</CENTER>' );
+
+// ・ｽ・ｽ・ｽ・ｽ・ｽ_・ｽﾅ用・ｽ・ｽ`
+var count = 0;         // ・ｽJ・ｽE・ｽ・ｽ・ｽ^
+var count1 = 0;         // ・ｽJ・ｽE・ｽ・ｽ・ｽ^
+var timer = 700;       // ・ｽ^・ｽC・ｽ}・ｽ[
+var col = new Array(); // ・ｽF・ｽw・ｽ・ｽz・ｽ・ｽ
+col[0] = "#FFFFF0";    // ・ｽF・ｽw・ｽ・ｽi・ｽw・ｽi・ｽF・ｽj
+col[1] = "#FF0000";    // ・ｽF・ｽw・ｽ・ｽi・ｽ・ｽ・ｽ・ｽ・ｽ\・ｽ・ｽ・ｽF・ｽj
+
+// ・ｽ_・ｽﾅ関撰ｿｽ
+function ieblink(){
+    document.all["new"].style.color = col[count]; // ・ｽF・ｽﾌ変更
+    if(count==1) count=0;                         // ・ｽJ・ｽE・ｽ・ｽ・ｽ^・ｽﾝ抵ｿｽ
+    else         ++count;                         // ・ｽJ・ｽE・ｽ・ｽ・ｽ^・ｽﾝ抵ｿｽ
+    setTimeout("ieblink()",timer);                // ・ｽ^・ｽC・ｽ}・ｽ[・ｽﾝ抵ｿｽ
+}
+
+// ・ｽ_・ｽﾅ関撰ｿｽ1
+function ieblink1(){
+    document.all["new1"].style.color = col[count]; // ・ｽF・ｽﾌ変更
+    if(count1==1) count1=0;                         // ・ｽJ・ｽE・ｽ・ｽ・ｽ^・ｽﾝ抵ｿｽ
+    else         ++count1;                         // ・ｽJ・ｽE・ｽ・ｽ・ｽ^・ｽﾝ抵ｿｽ
+    setTimeout("ieblink1()",timer);                // ・ｽ^・ｽC・ｽ}・ｽ[・ｽﾝ抵ｿｽ
+}
+
+	headerG();
+	TableDispG();
+	DataInput();
+function checkKey()
+{
+	if ( event.keyCode == 13 )
+	{
+		document.forms[0].focus();
+		alert( "・ｽﾜゑｿｽ・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ・ｽf・ｽ[・ｽ^・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ鼾・ｿｽﾍ趣ｿｽ・ｽﾌ会ｿｽﾊで「・ｽL・ｽ・ｽ・ｽ・ｽ・ｽZ・ｽ・ｽ・ｽv・ｽ・ｽ・ｽN・ｽ・ｽ・ｽb・ｽN・ｽ・ｽ・ｽ・ｽ\n・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ・ｽﾍに戻ゑｿｽ・ｽﾄ会ｿｽ・ｽ・ｽ・ｽ・ｽ・ｽB\nEnter・ｽL・ｽ[・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ・ｽﾆ抵ｿｽ・ｽ・ｽ・ｽ{・ｽ^・ｽ・ｽ・ｽ・ｽ・ｽN・ｽ・ｽ・ｽb・ｽN・ｽ・ｽ・ｽ・ｽ・ｽﾌと難ｿｽ・ｽ・ｽ・ｽ・ｽ・ｽﾆになゑｿｽﾜゑｿｽ・ｽB\n・ｽﾊの難ｿｽ・ｽﾍ搾ｿｽ・ｽﾚに移ゑｿｽﾉゑｿｽTAB・ｽL・ｽ[・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ}・ｽE・ｽX・ｽﾅ移難ｿｽ・ｽ・ｽ・ｽﾄゑｿｽ・ｽ・ｽ・ｽ・ｽ・ｽ・ｽ・ｽB\n" );
+	}
+}
+window.document.onkeydown = checkKey;
+//-->
+</SCRIPT>
+</body>
+<P align="center"><A href="//www.bigflower.co.jp/index.html"><IMG src="//www.bigflower.co.jp/fram2.gif" width="112" height="30" border="0"></A><A href="//www.bigflower.co.jp/v/index.html"><IMG src="//www.bigflower.co.jp/fram3.gif" width="117" height="30" border="0"></A><A href="//www.bigflower.co.jp/v/v-ez.htm"><IMG src="//www.bigflower.co.jp/fram4.gif" width="117" height="30" border="0"></A><A href="//www.bigflower.co.jp/H/index.htm"><IMG src="//www.bigflower.co.jp/fram5.gif" width="117" height="30" border="0"></A><A href="//www.bigflower.co.jp/sizai/index.htm"><IMG src="//www.bigflower.co.jp/fram6.gif" width="117" height="30" border="0"></A><A href="//www.bigflower.co.jp/chuui.htm"><IMG src="//www.bigflower.co.jp/fram7.gif" width="117" height="30" border="0"></A></P>
+</html>

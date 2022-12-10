@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: $font-family;
+    font-size: $font-size-root;
+    font-weight: $font-weight;
+    line-height: $font-line-height;
+    color: $text-color;
+    text-align: left;
+    background-color: $gray-base;
+    #__next{
+        main{
+            overflow-y: auto;
+            height: calc(100vh - #{$header-height});
+            scroll-behavior: smooth;
+            .container{
+                margin: auto;
+                max-width: $layout-width;
+                min-height: calc(100vh - #{$header-height} - #{$footer-height});
+            }
+            .p-fix-search{
+                position: fixed;
+                top: 100px;
+                width: $layout-width - 20px;
+                background-color: $gray-base;
+                overflow: hidden;
+            }
+            .p-fix-header{
+                position: fixed;
+                top: 162px;
+                width: $layout-width - 20px;
+                overflow: hidden;
+            }
+            @include responsive-max-width(1200px){
+                .p-fix-search{
+                    width: calc(100% - 30px);
+                }
+                .p-fix-header{
+                    width: calc(100% - 30px);
+                }
+            }
+        }
+    }
+}
+
+@import './header';
+@import './footer';
+@import './navbar';

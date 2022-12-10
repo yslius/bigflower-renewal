@@ -1,0 +1,37 @@
+
+.container{
+    .modal{
+        display: none;
+        position: fixed;
+        margin: auto;
+        justify-content: center;
+        background-color: rgba(0,0,0,.45);
+        width: 100vw;
+        height: 115vh;
+        top: 40px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        .block-modal{
+            margin: 30px auto;
+            padding: 10px;
+            width: 450px;
+            height: 350px;
+            background-color: $white;
+            border: 1px solid $gray-500;
+            border-radius: 20px;
+            opacity: unset;
+        }
+        &.show{
+            display: flex;
+        }
+    }
+    @include responsive-max-width(450px){
+        .modal{
+            .block-modal{
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,137 @@
+ saved from url=(0022)http://internet.e-mail -->
+<html>
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<head>
+<title>リテール　切花　相場表示　画像</title>
+</head>
+<SCRIPT language="JavaScript" src="//www.bigflower.co.jp/frame.js?20220711-4A"></SCRIPT>
+<SCRIPT language="JavaScript">
+
+	frame()
+//-->
+</SCRIPT>
+<SCRIPT langage="JavaScript">
+
+EVEN_ROW_COLOR	= '#FFEEF0';						//	相場表の偶数行の色
+ODD_ROW_COLOR	= '#FFFFDD';						//	相場表の奇数行の色
+var kno=0;
+var hno=0;
+var kh = new Array();
+var km = new Array();
+var kt = new Array();
+var ko = new Array();
+var kl = new Array();
+var kn = new Array();
+var kb = new Array();
+var kv = new Array();
+var gn = new Array();
+var gt = new Array();
+var RZaiko = new Array();
+var mm, dd, wk, souba, hh, mi;
+var tmm, tdd, ymm, ydd;
+var toujitu;
+var yokujitu;
+var comment1, comment2;
+var sousinflag = false;
+var mt = new Array(3);
+	mt[0] = "　";
+	mt[1] = "◎";
+	mt[2] = "○";
+//-->
+</SCRIPT>
+<SCRIPT language="JavaScript" src="Cookie.js?20220711-4A"></SCRIPT>
+<SCRIPT language="JavaScript" src="RSouba.js?20220711-4A"></SCRIPT>
+<SCRIPT language="JavaScript" src="RGazou.js?20220711-4A"></SCRIPT>
+<SCRIPT language="JavaScript" src="RZaiko.js?20220711-4A"></SCRIPT>
+<SCRIPT language="JavaScript">
+
+	yokujitu = ymm + "月" + ydd + "日";
+//-->
+</SCRIPT>
+<SCRIPT language="JavaScript" src="CGIRHeaderG.js?20220711-4A"></SCRIPT>
+<SCRIPT language="JavaScript" src="CGIRValidation.js?20220711-4A"></SCRIPT>
+<SCRIPT language="JavaScript" src="CGIRDataInput.js?20220711-4A"></SCRIPT>
+<SCRIPT language="JavaScript">
+
+function TableDispG()
+{
+	var i, gmark;
+	document.write( '<FORM METHOD="POST" ACTION="formmailNet.cgi">' );
+	for ( i=1; i <= kno; i++ )
+	{
+		//	偶数かどうかチェックし,偶数か奇数かによって相場表の色を分ける
+		var rowcolor;
+		if (i % 2 == 1)
+		{
+			rowcolor = EVEN_ROW_COLOR;
+		}
+		else
+		{
+			rowcolor = ODD_ROW_COLOR;
+		}
+		if ( kh[i].charAt(0) == "＠" )
+		{
+			kh[i] = kh[i].substr(1);
+			kt[i] = "-";
+			ko[i] = "-";
+			kl[i] = "-";
+//			kb[i] = "注文できません。";
+			rowcolor = "#FF9966";
+		}
+		if ( kh[i].charAt(0) == "＄" || RZaiko[i-1] == 0 )
+		{
+			aFlag = 1;
+			kh[i] = "完売しました";
+			kt[i] = "-";
+			ko[i] = "-";
+			kl[i] = "-";
+		}
+		document.write( "<TR BGCOLOR=" + rowcolor + " VALIGN=bottom>" );
+//		document.write( "<TR VALIGN=bottom>" );
+		if ( kh[i].length > 8 )
+			document.write( "<TD ALIGN=left><FONT SIZE=-1>" + kh[i] + "</FONT></TD>" );
+		else
+			document.write( "<TD ALIGN=left><FONT SIZE=+0>" + kh[i] + "</FONT></TD>" );
+		if ( km[i].length > 8 )
+			document.write( "<TD ALIGN=center><FONT SIZE=-1>" + km[i] + "</FONT></TD>");
+		else
+			document.write( "<TD ALIGN=center><FONT SIZE=+0>" + km[i] + "</FONT></TD>");
+		document.write( "<TD ALIGN=right><FONT SIZE=+1>" + kt[i] + "</FONT></TD>");
+		document.write( "<TD ALIGN=center><FONT SIZE=+1>" + ko[i] + "</FONT></TD>" );
+		document.write( "<TD ALIGN=center><FONT SIZE=+1>" + kl[i] + "</FONT></TD>" );
+		document.write( '<TD ALIGN=right><FONT SIZE=+0><input type=text size=4 name="k' + i + '"  onChange="lotcheck(' + i + ');">' + kn[i] + "</FONT></TD>" );
+		document.write( "<TD ALIGN=center><FONT SIZE=+1>" + kb[i] + "</FONT></TD>" );
+		if ( gnt[i*2-1] == "" ) gmark = mt[0];
+		else                    gmark = mt[gnt[i*2-1]];
+		if ( gnt[i*2-1] == 1 )
+		{
+			document.write( '<TD ALIGN=center><FONT SIZE=+1><INPUT TYPE=button value="' + gmark + '" onClick="gazou(' + "'" + kh[i] + "','" + gnt[i*2-2] + "'," + gnt[i*2-1] + ')";></FONT></TD>' );
+		}
+		else if ( gnt[i*2-1] == 2 )
+		{
+			document.write( '<TD ALIGN=center><FONT SIZE=+1><INPUT TYPE=button value="' + gmark + '" onClick="gazou(' + "'" + kh[i] + "','" + gnt[i*2-2] + "'," + gnt[i*2-1] + ')";></FONT></TD>' );
+		}
+		else
+		{
+			document.write( "<TD ALIGN=center><FONT SIZE=+1>" + gmark + "</FONT></TD>" );
+		}
+	}
+	document.write( "</TABLE>" );
+	document.write( "<BR><CENTER>" + comment1 + "<BR></CENTER>" );
+	document.write( "<center><p>" + comment2 + "</p></center><BR><hr><BR>" );
+}
+//-->
+</SCRIPT>
+<body BGCOLOR="FFFFDD">
+<SCRIPT langage="JavaScript">
+
+	headerG();
+	TableDispG();
+	DataInput();
+//-->
+</SCRIPT>
+</body>
+<P align="center"><A href="//www.bigflower.co.jp/index.html"><IMG src="//www.bigflower.co.jp/fram2.gif" width="112" height="30" border="0"></A><A href="//www.bigflower.co.jp/v/index.html"><IMG src="//www.bigflower.co.jp/fram3.gif" width="117" height="30" border="0"></A><A href="//www.bigflower.co.jp/v/v-ez.htm"><IMG src="//www.bigflower.co.jp/fram4.gif" width="117" height="30" border="0"></A><A href="//www.bigflower.co.jp/H/index.htm"><IMG src="//www.bigflower.co.jp/fram5.gif" width="117" height="30" border="0"></A><A href="//www.bigflower.co.jp/sizai/index.htm"><IMG src="//www.bigflower.co.jp/fram6.gif" width="117" height="30" border="0"></A><A href="//www.bigflower.co.jp/chuui.htm"><IMG src="//www.bigflower.co.jp/fram7.gif" width="117" height="30" border="0"></A></P>
+</html>

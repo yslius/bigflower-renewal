@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<HEAD>
+<title>バーチャル特別割引・販売スケジュール</title>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<META name="GENERATOR" content="IBM WebSphere Studio Homepage Builder Version 7.0.0.0 for Windows">
+<META http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<SCRIPT language="JavaScript" src="../frame.js?VER20220105a"></SCRIPT>
+<SCRIPT language="JavaScript">
+
+	frame()
+
+	var timer = 120000;
+	function ReloadAddr()
+	{
+		window.location.reload();
+	}
+	setTimeout(ReloadAddr,timer);
+
+//-->
+</SCRIPT>
+</HEAD>
+<BODY bgcolor="#fef9de" text="#000000" link="#990000" vlink="#990000" alink="#990066">
+<div align="center">
+  <p><strong><font size="+3">先取りバーチャル</font></strong></p>
+  <p> 入荷当日発送の販売です。</p>
+  <p>水揚げ等はしておりませんのでお客様の方でお願い致します。</p>
+<SCRIPT language="JavaScript">
+
+	var kaisenT = new Array();
+	var knenT = new Array();
+	var ktukiT = new Array();
+	var khiT = new Array();
+	var kjiT = new Array();
+	var khunT = new Array();
+	var snenT = new Array();
+	var stukiT = new Array();
+	var shiT = new Array();
+	var sjiT = new Array();
+	var shunT = new Array();
+	var syoubiT = new Array();
+	var stypeT = new Array();
+	var jnenT = new Array();
+	var jtukiT = new Array();
+	var jhiT = new Array();
+	var jjiT = new Array();
+	var jhunT = new Array();
+	var jyoteiT = new Array();
+	var knoT = new Array();
+	var osusumeT = new Array();
+	var hanbai1T = new Array();
+	var hanbai2T = new Array();
+	var hanbai3T = new Array();
+	var headerT  = new Array();
+	var flag = 0;
+//-->
+</SCRIPT>
+<SCRIPT language="JavaScript" src="../buyer/js/KSouba20A.js?VER20220105a"></SCRIPT>
+<SCRIPT language="JavaScript" src="../buyer/js/KSouba21A.js?VER20220105a"></SCRIPT>
+<SCRIPT language="JavaScript" src="../buyer/js/KSouba22A.js?VER20220105a"></SCRIPT>
+<SCRIPT language="JavaScript" src="../buyer/js/KSouba23A.js?VER20220105a"></SCRIPT>
+<SCRIPT language="JavaScript" src="../buyer/js/KSouba24A.js?VER20220105a"></SCRIPT>
+<SCRIPT language="JavaScript" src="../buyer/simeCheck.js?VER20220105a"></SCRIPT>
+<SCRIPT language="JavaScript">
+
+	var i,j,no;
+	var day,hour,minute,Now;
+	var kaisenMAX = 25;
+
+	Now = new Date();
+	day = Now.getDate();
+	hour = Now.getHours();
+	minute = Now.getMinutes();
+	
+	document.write( '<table width="96%" border="1" bordercolor="#FFCC66">' );
+	for ( i = 20 ; i < kaisenMAX ; i++ )
+	{
+		if( i < 10 )
+			no = "0" + i;
+		else
+			no = i;
+		flag = simeCheck( snenT[i], stukiT[i], shiT[i], sjiT[i], shunT[i] );
+		if ( knenT[i] > 0 )
+		{
+//			if( ktukiT[i] == 0 )
+//			{
+//				//データ無し・表示しない
+//			}
+			if ( stypeT[i] == 4 ) //無期限
+			{
+				document.write( '<tr bgcolor="#FFCC99">' );
+				if ( osusumeT[i] == 1 )
+				{
+					document.write( '<td width="10%"><div align="center"><img src="osusu.gif"></div></tr>' );
+				}
+				else
+				{
+					document.write( '<td width="10%"><div align="center"></div></td>' );
+				}
+				document.write( '<td width="20%"><div align="center"><a href="../buyer/kaisen',no,'.htm">' ,hanbai1T[i] ,'</a></div></td>' );
+				document.write( '<td width="12%"><div align="center">販売中</div></td>' );
+				document.write( '<td width="58%">', hanbai2T[i] ,'</td></tr>' );
+			}
+			else if ( flag > 0 )
+			{
+				document.write( '<tr bgcolor="#FFCC99">' );
+				if ( osusumeT[i] == 1 )
+				{
+					document.write( '<td width="10%"><div align="center"><img src="osusu.gif"></div></td>' );
+				}
+				else
+				{
+					document.write( '<td width="10%"><div align="center"></div></td>' );
+				}
+				document.write( '<td width="20%"><div align="center"><a href="../buyer/kaisen',no,'.htm">' ,hanbai1T[i], '</a></div></td>' );
+				document.write( '<td width="12%"><div align="center">販売中</div></td>' );
+				document.write( '<td width="58%">', hanbai2T[i] ,'</td></tr>' );
+			}
+			else
+			{
+				document.write( '<td width="10%"><din align="center"></div></td>' );
+				document.write( '<td width="20%"><div align="center"><a href="../buyer/kaisen',no,'.htm">',hanbai1T[i],'</a></div></td>' );
+				document.write( '<td width="12%"><div align="center">販売終了</div></td>' );
+				document.write( '<td width="58%">',hanbai3T[i],'</td></tr>' );
+			}
+		}
+		else
+		{
+			if( ktukiT[i] == 0 )
+			{
+				//データ無し・表示しない
+			}
+			else if ( stypeT[i] == 4 )	// 無期限
+			{
+				document.write( '<tr bgcolor="#FFCC99">' );
+				if ( osusumeT[i] == 1 )
+				{
+					document.write( '<td width="10%"><div align="center"><img src="osusu.gif"></div></td>' );
+				}
+				else
+				{
+					document.write( '<td width="10%"><div align="center"></div></td>' );
+				}
+				document.write( '<td width="20%"><div align="center"><a href="../buyer/kaisen',no,'.htm">' ,hanbai1T[i], '</a></div></td>' );
+				document.write( '<td width="12%"><div align="center">販売中</div></td>' );
+				document.write( '<td width="58%">', hanbai2T[i] ,'</td></tr>' );
+			}
+			else if ( flag > 0 )
+			{
+				document.write( '<tr bgcolor="#FFCC99">' );
+				if ( osusumeT[i] == 1 )
+				{
+					document.write( '<td width="10%"><div align="center"><img src="osusu.gif"></div></td>' );
+				}
+				else
+				{
+					document.write( '<td width="10%"><div align="center"></div></td>' );
+				}
+				document.write( '<td width="20%"><div align="center"><a href="../buyer/kaisen',no,'.htm">' ,hanbai1T[i], '</a></div></td>' );
+				document.write( '<td width="12%"><div align="center">販売中</div></td>' );
+				document.write( '<td width="58%">', hanbai2T[i] ,'</td></tr>' );
+			}
+		}
+	}
+	document.write( '</table>' );
+//-->
+</SCRIPT>
+ --------------------------- //-->
+<CENTER><BR><FONT color="#660000" size="+1"><B>このページの情報は頻繁に変化します。<BR>
+お客様ご自身で常に<input type="button" value="更新" onClick="location.reload()">してご覧下さい。<BR><BR></B></FONT>
+***********************************<BR>
+<B><A href="tokuwariform.htm" target="_blank">特割情報更新サービス</A></B><BR>
+こちらにご登録頂ければ販売開始時刻にご連絡致します。<BR>
+開始時刻に毎回ご連絡させて頂きますので月、水、金曜の午前中～昼頃に数回、<BR>
+メールにてご連絡させて頂きます。<BR>
+***********************************<BR>
+</CENTER>
+</div>
+<P align="center"><A href="../index.html"><IMG src="../fram2.gif" border="0"></A><A href="index.html"><IMG src="../fram3.gif" border="0"></A><A href="v-ez.htm"><IMG src="../fram4.gif" border="0"></A><A href="../H/index.htm"><IMG src="../fram5.gif" border="0"></A><A href="../sizai/index.htm"><IMG src="../fram6.gif" border="0"></A><A href="../chuui.htm"><IMG src="../fram7.gif"  border="0"></A></P>
+</BODY>
+</html>

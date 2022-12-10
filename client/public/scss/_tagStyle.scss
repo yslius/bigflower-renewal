@@ -1,0 +1,40 @@
+// ul tag
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+// a tag
+a{
+    text-decoration: none;
+    color: $text-color;
+}
+// input
+input{
+    margin: 0;
+    font-size: 16px;
+    &:focus-visible{
+        outline: unset;
+    }
+}
+// button
+button{
+    margin: 0;
+}
+//select
+select{
+    &:focus-visible{
+        outline: unset;
+    }
+}
+// p
+p{
+    padding: 0;
+    margin: 0;
+}
+// h
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+    line-height: 1.2;
+}

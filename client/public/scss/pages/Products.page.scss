@@ -1,0 +1,221 @@
+.product{
+    padding: 0 10px;
+    .line{
+        text-align: center;
+    }
+    .btn{
+        padding: 2px 20px;
+        border: unset;
+        border-radius: 6px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    .product-header{
+        padding: 35px 0;
+        .title{
+            text-align: center;
+        }
+        .card-note{
+            padding: 15px 0;
+        }
+        .list-memo{
+            padding-bottom: 15px;
+            .line{
+                height: 24px;
+                display: table-row;
+            }
+            .link{
+                color: $blue;
+            }
+        }
+    }
+    .product-content{
+        .time{
+            justify-content: flex-end;
+            .label{
+                padding-right: 10px;
+            }
+        }
+        .search{
+            box-sizing: border-box;
+            padding: 15px 10px;
+            justify-content: space-between;
+            .group{
+                .controll{
+                    height: 30px;
+                    width: 320px;
+                    background-color: $white;
+                    border: 1px solid $gray-600;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    input{
+                        width: 100%;
+                        border: unset;
+                    }
+                    .icon{
+                        display: flex;
+                        padding: 0 5px;
+                        margin: auto;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+                .btn-search{
+                    margin: 0 10px;
+                    background-color: #34332C;
+                    color: $white;
+                    &:hover{
+                        background-color: darken($color: #34332C, $amount: 10%);
+                    }
+                }
+                .search-count{
+                    line-height: 1.7;
+                    width: 70px;
+                }
+                .btn-add{
+                    margin-right: 10px;
+                    background-color: #F6E866;
+                    &:hover{
+                        background-color: darken($color: #F6E866, $amount: 10%);
+                    }
+                }
+                .btn-clear{
+                    background-color: #949490;
+                    color: $white;
+                    &:hover{
+                        background-color: darken($color: #949490, $amount: 10%);
+                    }
+                }
+            }
+        }
+        .list-products{
+            box-shadow: $color_box_shadow;
+            
+        }
+    }
+    .product-footer{
+        margin: 35px 0;
+    }
+    @include responsive-max-width(768px){
+        .btn{
+            padding: 2px 15px;
+            width: 90px;
+        }
+        .product-content{
+            .search{
+                .group{
+                    width: 50%;
+                    .controll{
+                        width: 50%;
+                    }
+                    .btn-add{
+                        margin-left: auto;
+                    }
+                }
+            }
+            .list-products{
+                box-shadow: none;
+                .list-head{
+                    display: none;
+                }
+            }
+        }
+    }
+    @include responsive-max-width(530px){
+        .btn{
+            padding: 7px 0px;
+        }
+        .product-content{
+            .search{
+                padding-bottom: 0;
+                flex-direction: column;
+                .group{
+                    justify-content: center;
+                    width: 100%;
+                    margin-bottom: 10px;
+                    .controll{
+                        width: 60%;
+                    }
+                    .btn-add{
+                        margin-left: unset;
+                    }
+                }
+            }
+            .list-products{
+                box-shadow: none;
+                .list-head{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.container{
+    .modal-clear-all, .modal-clear-one {
+        .block-modal{
+            height: 185px;
+            text-align: center;
+            h3{
+                margin: 20px 0;
+            }
+            .action{
+                margin: 30px auto;
+                justify-content: center;
+                .btn{
+                    margin: 0 10px;
+                    padding: 8px;
+                    width: 100px;
+                    border: unset;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    &.cancel{
+                        background-color: $gray-600;
+                        color: $white;
+                        &:hover{
+                            background-color: darken($color: $gray-600, $amount: 10%);
+                        }
+                    }
+                    &.agree{
+                        background-color: $orange;
+                        &:hover{
+                            background-color: darken($color: $orange, $amount: 10%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .modal-clear-one {
+        .block-modal{
+            height: 155px;
+            h3{
+                margin: 30px 0;
+            }
+            .action{
+                margin: 10px auto;
+                justify-content: center;
+                .btn{
+                    margin: 0 10px;
+                    padding: 8px;
+                    width: 100px;
+                    border: unset;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    &.cancel{
+                        background-color: $gray-600;
+                        color: $white;
+                        &:hover{
+                            background-color: darken($color: $gray-600, $amount: 10%);
+                        }
+                    }
+                    &.agree{
+                        background-color: $orange;
+                        &:hover{
+                            background-color: darken($color: $orange, $amount: 10%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

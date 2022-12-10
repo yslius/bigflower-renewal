@@ -1,0 +1,209 @@
+.navbar{
+    position: relative;
+    margin: auto 0;
+    cursor: pointer;
+    #navbar-menu{
+        display: none;
+    }
+    .navbar-menu{
+        display: none;
+    }
+    .nav{
+        font-weight: 600;
+        color: $gray-700;
+        .nav-item{
+            position: relative;
+            margin: auto 0;
+            padding-left: 50px;
+            white-space: pre-wrap;
+            z-index: 99;
+            .group{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .item-text{
+                    display: flex;
+                    text-align: center;
+                }
+                svg{
+                    margin-left: 3px;
+                }
+            }
+            .nav{
+                position: absolute;
+                height: 0px;
+                overflow: hidden;
+                background-color: $white;
+                z-index: 1;
+                .nav-item{
+                    padding: 0;
+                    &:hover{
+                        color: $orange;
+                    }
+                }
+            }
+            &:hover{
+                .group{
+                    color: $orange;
+                    svg{
+                        color: $orange;
+                    }
+                    .item-text{
+                        border-bottom: 1px solid $gray-200;
+                    }
+                }
+                .nav{
+                    left: 40px;
+                    padding: 40px 15px 15px;
+                    height: auto;
+                    width: 200px;
+                    font-size: 15px;
+                    border-bottom: 1px solid $orange;
+                }
+            }
+            &:last-child{
+                .nav{
+                    width: 170px;
+                }
+            }
+        }
+    }
+    @include responsive-max-width($layout-width){
+        .nav{
+            font-size: 15px;
+            font-weight: bold;
+            .nav-item{
+                padding-left: 20px;
+                &:last-child{
+                    &:hover{
+                        .nav{
+                            right: -15px;
+                            left: unset;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include responsive-max-width(1024px){
+        .nav{
+            font-size: 15px;
+            font-weight: bold;
+            .nav-item{
+                padding-left: 20px;
+                &:hover{
+                    .nav{
+                        left: 15px;
+                    }
+                }
+            }
+        }
+    }
+    @include responsive-max-width(768px){
+        .navbar-menu{
+            position: absolute;
+            right: 0;
+            top: -15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            width: 30px;
+            height: 30px;
+            background-color: $white;
+            @include transition(0.2s);
+            .line{
+                position: relative;
+                display: block;
+                width: 30px;
+                height: 4px;
+                background-color: $orange;
+                @include transition(0.2s);
+                &::after{
+                    position: absolute;
+                    top: 10px;
+                    content: '';
+                    width: 30px;
+                    height: 4px;
+                    background-color: $orange;
+                    @include transition(0.2s);
+                }
+                &::before{
+                    position: absolute;
+                    top: -10px;
+                    content: '';
+                    width: 30px;
+                    height: 4px;
+                    background-color: $orange;
+                    @include transition(0.2s);
+                }
+            }
+        }
+        .nav{
+            overflow: hidden;
+            height: 0;
+            width: 0;
+            z-index: 99;
+            .nav-item{
+                margin: unset;
+                padding: unset;
+            }
+        }
+        #navbar-menu{
+            &:checked{
+                & ~ .nav{
+                    position: absolute;
+                    right: -15px;
+                    top: 50px;
+                    display: flex;
+                    flex-direction: column;
+                    width: 250px;
+                    height: calc(100vh - 100px);
+                    background-color: $white;
+                    @include transition(0.2s);
+                    .nav-item{
+                        position: unset;
+                        padding-bottom: 10px;
+                        .group{
+                            justify-content: unset;
+                            padding: 0 15px;
+                        }
+                        .nav{
+                            position: unset;
+                            margin: 0px 0 0 15px;
+                            padding: 0 0 0 15px;
+                            .nav-item{
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+                & + .navbar-menu{
+                    .line{
+                        width: 0;
+                        @include transition(0.2s);
+                        &::after{
+                            top: 0;
+                            transform: rotate(45deg);
+                            @include transition(0.2s);
+                        }
+                        &::before{
+                            top: 0;
+                            transform: rotate(-45deg);
+                            @include transition(0.2s);
+                        }
+                    }
+                }
+                & ~ .nav-background{
+                    position: absolute;
+                    left: -100vw;
+                    top: 50px;
+                    width: 100vw;
+                    height: calc(100vh - 100px);
+                    background-color: $gray-700;
+                    opacity: 40%;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+}

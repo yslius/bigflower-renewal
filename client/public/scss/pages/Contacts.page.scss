@@ -1,0 +1,232 @@
+.contact{
+    padding: 0 10px;
+    .line{
+        text-align: center;
+    }
+    .btn{
+        padding: 2px 20px;
+        border: unset;
+        border-radius: 6px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    .contact-header{
+        padding: 35px 0;
+        .title{
+            text-align: center;
+        }
+        .card-note{
+            padding: 15px 0;
+        }
+        .list-memo{
+            padding-bottom: 15px;
+            .line{
+                height: 24px;
+                display: table-row;
+            }
+            .link{
+                color: $blue;
+            }
+        }
+    }
+    .contact-content{
+        margin: auto;
+        padding: 20px 30px;
+        width: 70%;
+        border-radius: 10px;
+        background-color: $white;
+        border: 1px solid $gray-500;
+        .group{
+            margin: 10px 0;
+            .label{
+                width: 40%;
+                font-weight: 600;
+                text-align: right;
+                .required{
+                    padding: 10px;
+                    font-size: 12px;
+                    color: $red;
+                }
+            }
+            .validate{
+                width: 330px;
+                .controll{
+                    width: 100%;
+                    border: 1px solid $gray-700;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    input{
+                        width: 100%;
+                        border: unset;
+                    }
+                    textarea{
+                        margin: -7px 0;
+                        padding: 5px;
+                        height: 55px;
+                        width: 97%;
+                        border: unset;
+                        &:focus-visible{
+                            border: unset;
+                            outline: unset;
+                        }
+                        &:focus{
+                            border: unset;
+                            outline: unset;
+                        }
+                    }
+                }
+                .error{
+                    width: 80%;
+                }
+            }
+            .select{
+                margin-left: 10px;
+                width: 70px;
+                height: 24px;
+                border: 1px solid $gray-700;
+                border-radius: 5px;
+                select{
+                    margin: auto;
+                    width: 100%;
+                    border: unset;
+                }
+            }
+            &.post-code{
+                .validate{
+                    width: 245px;
+                }
+                .btn-post-code{
+                    margin-left: 10px;
+                    background-color: $gray-900;
+                    color: $white;
+                    width: 70px;
+                    height: 26px;
+                    &:hover{
+                        background-color: darken($color: $gray-900, $amount: 10%);
+                    }
+                }
+            }
+            &.name{
+                .validate{
+                    width: 245px;
+                }   
+            }
+        }
+        .note{
+            text-align: center;
+        }
+        .action{
+            justify-content: center;
+            .btn{
+                margin: 5px;
+                padding: 5px 10px;
+            }
+            .confirm{
+                width: 120px;
+                background-color: $orange;
+                &:hover{
+                    background-color: darken($color: $orange, $amount: 10%);
+                }
+            }
+            .back{
+                background-color: $gray-500;
+                color: $white;
+                &:hover{
+                    background-color: darken($color: $gray-500, $amount: 10%);
+                }
+            }
+        }
+    }
+    .contact-footer{
+        margin: 35px 0;
+    }
+    @include responsive-max-width(768px){
+        .contact-content{
+            .group{
+                margin: auto;
+                flex-wrap: wrap;
+                justify-content: center;
+                .label{
+                    margin-top: 10px;
+                    width: 70%;
+                    text-align: left;
+                }
+                .validate{
+                    width: 70%;
+                }
+                &.post-code{
+                    .validate{
+                        width: calc(70% - 85px);
+                    }
+                    .btn-post-code{
+                        margin-left: 10px;
+                    }
+                }
+                &.name{
+                    .validate{
+                        width: calc(70% - 85px);
+                    }
+                }
+            }
+            .note{
+                margin-top: 10px;
+            }
+        }
+    }
+    @include responsive-max-width(492px){
+        .contact-content{
+            padding: 20px 15px;
+            width: 90%;
+            .group{
+                .label{
+                    width: 100%;
+                }
+                .validate{
+                    width: 100%;
+                }
+                &.post-code{
+                    .validate{
+                        width: calc(100% - 85px);
+                    }
+                }
+                &.name{
+                    .validate{
+                        width: calc(100% - 85px);
+                    }
+                }
+            }
+            .note{
+                margin-top: 10px;
+            }
+        }
+    }
+}
+.container{
+    .modal-order{
+        .block-modal{
+            height: 185px;
+            text-align: center;
+            h3{
+                margin: 20px 0;
+            }
+            .action{
+                margin: 30px auto;
+                justify-content: center;
+                .btn{
+                    margin: 0 10px;
+                    padding: 8px;
+                    min-width: 100px;
+                    border: unset;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    &.agree{
+                        background-color: $orange;
+                        &:hover{
+                            background-color: darken($color: $orange, $amount: 10%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

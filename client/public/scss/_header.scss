@@ -1,0 +1,22 @@
+header {
+    background-color: $white;
+    box-shadow: $color_box_shadow;
+    height: $header-height;
+    user-select: none;
+    .content{
+        margin: auto;
+        padding: 15px;
+        width: $layout-width;
+        display: flex;
+        justify-content: space-between;
+        .logo{
+            margin: auto 0;
+            width: 200px;
+            height: 35px;
+            cursor: pointer;
+        }
+        @include responsive-max-width($layout-width){
+            width: 100% !important;
+        }
+    }
+}

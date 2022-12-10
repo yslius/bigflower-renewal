@@ -1,0 +1,15 @@
+1. Màn hình: orders/rrtoday(Lúc nhập nội dung để gửi mail)
+1.1 Trường hợp chưa nhập vào textbox mà click button 確定 thì: [Tên mục]を入力してください。
+1.2 Trường hợp nhập sai mã bưu điện mà click button 検索 thì: 便番号が見つかりません。
+1.3 Trường hợp nhập không phải kiểu số vào mục số điện thoại(お届け先Tel ) mà click button 確定 thì: 電話番号が正しくありません。
+
+2. Màn hình: orders/rrtoday(Lúc Chọn hàng)
+2.1 Trường hợp không có sản phẩm nào hết thì : 商品対象が見つかりませんでした。
+
+3. Màn hình: buyer/kaisen01 -> buyer/kaisen018 (Lúc nhập nội dung để gửi mail)
+3.1 Trường hợp chưa nhập vào textbox mà click button 確定 thì: [Tên mục]を入力してください。
+3.2 Trường hợp nhập sai mã bưu điện mà click button 検索 thì: 便番号が見つかりません。
+3.3 Trường hợp nhập không phải kiểu số vào mục số điện thoại(お届け先Tel ) mà click button 確定 thì: 電話番号が正しくありません。
+3.4 Trường hợp nhập không phải kiểu số vào mục số điện thoại(電話番号 ) mà click button 確定 thì: 電話番号が正しくありません。
+3.5 Trường hợp nhập không phải kiểu số vào mục mail address(メールアドレス ) mà click button 確定 thì: メールアドレスが正しくありません。
+3.6 Trường hợp nhập confrim mail (確認メールアドレス ) không giống với  mail (メールアドレス )   mà click button 確定 thì: 確認メールアドレスが正しくありません。

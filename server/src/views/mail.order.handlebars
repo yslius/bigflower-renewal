@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{!-- <title>Bigflower Info</title> --}}
+    <style> 
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h3>これらの注文およびすべての注文のステータスを追跡するには、セラーセントラルの注文管理ページにアクセスしてください。</h3>
+    <p>注文番号：{{dayCreate}}</p>
+    {{!-- <%Tên người đặt hàng%> --}}
+    <p>名前:{{name}}</p> 
+    {{!-- <%ID người đặt hàng%> --}}
+    <p>ID:{{id}}</p>
+    {{!-- <%Tên người nhận hàng%> --}}
+    <p>お届け先氏名:{{name_reci}}</p>
+    {{!-- <%Mã bưu điện%> --}}
+    <p>お届け先郵便番号:{{postcode}}</p>
+    {{!-- <%Địa chỉ%> --}}
+    <p>お届け先住所:{{address}}</p>
+    {{!-- <%Số điện thoại%> --}}
+    <p>お届け先Tel:{{phone}}</p>
+    {{!-- <%Commnet của khách hàng%> --}}
+    <p>コメント:{{comment}}</p>
+    <table style="width:100%">
+        <tr>
+            {{!-- <%Số lượng %> --}}
+            <th>数量</th>
+            {{!-- <%Tên sản phẩm -  mục lớn%> --}}
+            <th>品名</th> 
+             {{!-- <%Tên sản phẩm -  mục nhỏ%> --}}
+            <th>品目</th>
+            {{!-- <%Giá tiền %> --}}
+            <th>備考</th>
+            {{!-- <%Số lot %> --}}
+            <th>ロット数</th>
+            {{!-- <%Loại %> --}}
+            <th>等級</th>
+        </tr>
+        {{#each listOrder as |item|}}
+            <tr>
+                {{!-- <%Số lượng %> --}}
+                <td>{{item.quantily}}</td>
+                {{!-- <%Tên sản phẩm -  mục lớn%> --}}
+                <td>{{item.name}}</td> 
+                {{!-- <%Tên sản phẩm -  mục nhỏ%> --}}
+                <td>{{item.description}}</td>
+                {{!-- <%Giá tiền %> --}}
+                <td>{{item.price}}</td>
+                {{!-- <%Số lot %> --}}
+                <td>{{item.lot_number}}</td>
+                {{!-- <%Loại %> --}}
+                <td>{{item.size}}</td>
+            </tr>
+        {{/each}}
+    </table>
+    <b>
+        <i>{{dayCreate}}</i>
+    </b>
+</body>
+</html>

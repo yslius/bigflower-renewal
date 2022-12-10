@@ -1,0 +1,470 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv='expires' content=''>
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<title>切花　相場表示　07回戦</title>
+</head>
+
+<SCRIPT language="JavaScript" src="../frame.js?20220711-4A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"></SCRIPT>
+<SCRIPT language="JavaScript">
+
+	frame();
+
+//-->
+</SCRIPT>
+<SCRIPT langage="JavaScript">
+
+EVEN_ROW_COLOR		= '#FFEEF0';		//	相場表の偶数行の色
+ODD_ROW_COLOR		= '#FFFFDD';		//	相場表の奇数行の色
+
+var kno=0;
+var hno=0;
+var kh = new Array();
+var km = new Array();
+var kt = new Array();
+var ko = new Array();
+var kl = new Array();
+var kn = new Array();
+var kb = new Array();
+var kv = new Array();
+var gn = new Array();
+var gt = new Array();
+
+var kaisenT = new Array();
+var knenT   = new Array();
+var ktukiT  = new Array();
+var khiT    = new Array();
+var snenT   = new Array();
+var stukiT  = new Array();
+var shiT    = new Array();
+var sjiT    = new Array();
+var stypeT  = new Array();
+var shunT   = new Array();
+var syoubiT = new Array();
+var jnenT   = new Array();
+var jtukiT  = new Array();
+var jhiT    = new Array();
+var knoT    = new Array();
+var osusumeT = new Array();
+var hanbai1T = new Array();
+var hanbai2T = new Array();
+var hanbai3T = new Array();
+var headerT  = new Array();
+var Zaiko07 = new Array();
+
+var IssueFlagT = new Array();
+var IssueT = new Array();
+var UseFlagT = new Array();
+var UseT = new Array();
+var couponT = new Array();
+var parT = new Array();
+var ennT = new Array();
+var word;
+var codeT = new Array();
+
+var kaisen;
+var kaisen2;
+var simenichi;
+var simejihun;
+var uketukebi;
+var snen, stuki, shi, sji, shun;
+var souba;
+var comment1, comment2;
+var sousinflag = false;
+var mt = new Array(3);
+	mt[0] = "　";
+	mt[1] = "◎";
+	mt[2] = "○";
+
+kkv = new Array();
+
+//-->
+</SCRIPT>
+
+<SCRIPT language="JavaScript" src="../Cookie.js?20220711-4A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"></SCRIPT>
+<SCRIPT language="JavaScript" src="./js/KSouba07A.js?20220711-4A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"></SCRIPT>
+<SCRIPT language="JavaScript" src="./js/KSouba07B.js?20220711-4A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"></SCRIPT>
+<SCRIPT language="JavaScript" src="./js/Zaiko07.js?20220711-4A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"></SCRIPT>
+<SCRIPT language="JavaScript" src="./js/couponcode.js?20220711-4A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"></SCRIPT>
+<SCRIPT language="JavaScript" src="simeCheck.js?20220711-4A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"></SCRIPT>
+<SCRIPT language="JavaScript">
+
+	kno = knoT[kaisen];
+	if ( kaisen < 10 ) kaisen2 = "0" + kaisen; 
+	else               kaisen2 = kaisen; 
+	simenichi = stukiT[kaisen] + "月" + shiT[kaisen] + "日";
+	simejihun = sjiT[kaisen] + "時" + shunT[kaisen] + "分";
+	uketukebi = ktukiT[kaisen] + "月" + khiT[kaisen] + "日";
+	snen = snenT[kaisen];
+	stuki = stukiT[kaisen];
+	shi = shiT[kaisen];
+	sji = sjiT[kaisen];
+	shun = shunT[kaisen];
+	stype = stypeT[kaisen];
+//-->
+</SCRIPT>
+
+<SCRIPT language="JavaScript" src="./js/KGazou07.js?20220711-4A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"></SCRIPT>
+<SCRIPT language="JavaScript" src="CGIKHeaderG.js?20220711-4A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"></SCRIPT>
+<SCRIPT language="JavaScript" src="CGIKValidation.js?20220711-4A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"></SCRIPT>
+<SCRIPT language="JavaScript" src="CGIDataInput.js?20220711-4A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"></SCRIPT>
+<SCRIPT language="JavaScript">
+
+
+function TableDispG()
+{
+	var i, gmark;
+	var hinmei, i01, c, aFlag = 0;
+	var toukyu;
+	var rowColor;
+
+	document.write( '<FORM METHOD="POST" ACTION="../buyer/formmailNetZ.cgi">' );
+	for ( i = 0; i < kno; i++ )
+	{
+		//	商品が偶数かどうかチェックし,偶数か奇数かによって行の色を分ける
+		if ( i % 2 == 0)
+			rowColor = EVEN_ROW_COLOR;
+		else
+			rowColor = ODD_ROW_COLOR;
+
+//		if ( kh[i].indexOf( "＄", 0 ) < 0 )
+//		{
+			if ( kh[i].indexOf( "〃", 0 ) < 0 )
+			{	
+				i01 = 0;
+				c = kh[i].charAt(0);
+				if ( c == "＄" || c == "＠" || c == "＃" ) i01 = 1;
+				hinmei = kh[i].substr(i01);
+			}
+//		}
+		if ( ko[i] != "〃" )
+		{
+			toukyu = ko[i];
+		}
+		if ( aFlag == 1 )
+		{
+			aFlag = 0;
+			if ( kh[i].indexOf( "＄", 0 ) < 0 )
+			{
+				if ( kh[i].indexOf( "〃", 0 ) >= 0 )
+					kh[i] = hinmei;
+				if ( ko[i].indexOf( "〃", 0 ) >= 0 )
+					ko[i] = toukyu;
+			}  
+		}
+		if ( Zaiko07[i] == 0 )
+		{
+			kh[i] = "＄" + kh[i];
+		}
+		if ( kh[i].charAt(0) == "＄" )
+		{
+			aFlag = 1;
+			kh[i] = "完売しました。";
+//			km[i] = "ありがとうございました。";
+			kt[i] = "-";
+			ko[i] = "-";
+			kl[i] = "-";
+//			kb[i] = "注文できません。";
+		}
+		if ( kh[i].charAt(0) == "＠" )
+		{
+			kh[i] = kh[i].substr(1);
+			kt[i] = "-";
+			ko[i] = "-";
+			kl[i] = "-";
+//			kb[i] = "注文できません。";
+			rowColor = "#FF9966";
+		}
+		if ( kh[i].charAt(0) == "＃" )
+		{
+			kh[i] = kh[i].substr(1);
+		}
+		document.write( "<TR BGCOLOR=" + rowColor +" VALIGN=bottom>" );
+
+		if ( kh[i].length > 8 )
+			document.write( "<TD ALIGN=left><FONT SIZE=-1>" + kh[i] + "</FONT></TD>" );
+		else
+			document.write( "<TD ALIGN=left><FONT SIZE=+0>" + kh[i] + "</FONT></TD>" );
+		if ( km[i].length > 8 )
+			document.write( "<TD ALIGN=center><FONT SIZE=-1>" + km[i] + "</FONT></TD>");
+		else
+			document.write( "<TD ALIGN=center><FONT SIZE=+0>" + km[i] + "</FONT></TD>");
+		document.write( "<TD ALIGN=right><FONT SIZE=+1>" + kt[i] + "</FONT></TD>");
+		document.write( "<TD ALIGN=center><FONT SIZE=+1>" + ko[i] + "</FONT></TD>" );
+		document.write( "<TD ALIGN=center><FONT SIZE=+1>" + kl[i] + "</FONT></TD>" );
+		document.write( '<TD ALIGN=right><FONT SIZE=+0><input type=text size=4 name="k"  onChange="lotcheck(' + i + ');">' + kn[i] + "</FONT></TD>" );
+		document.write( "<TD ALIGN=center><FONT SIZE=+1>" + kb[i] + "</FONT></TD>" );
+
+		if ( gnt[i*2+1] == "" ) gmark = " ";
+		else            		gmark = mt[gnt[i*2+1]];
+		if ( gnt[i*2+1] == 1 )
+		{
+			document.write( '<TD ALIGN=center><FONT SIZE=+1><INPUT TYPE=button value="' + gmark + '" onClick="gazou(' + "'" + kh[i] + "','" + gnt[i*2] + "'," + gnt[i*2+1] + ')";></FONT></TD>' );
+
+		}
+		else if ( gnt[i*2+1] == 2 )
+		{
+			document.write( '<TD ALIGN=center><FONT SIZE=+1><INPUT TYPE=button value="' + gmark + '" onClick="gazou(' + "'" + kh[i] + "','" + gnt[i*2] + "'," + gnt[i*2+1] + ')";></FONT></TD>' );
+		}
+		else
+		{
+			document.write( "<TD ALIGN=center><FONT SIZE=+1>" + gmark + "</FONT></TD>" );
+		}
+		document.write( "</TR>" );
+	}
+//	document.write( "</FORM>" );
+	document.write( "</TABLE>" );
+	document.write( "<BR><CENTER>" + comment1 + "<BR></CENTER>" );
+	document.write( "<center><p>" + comment2 + "</p></center><BR>" );
+	document.write( "<center><p>仕入れ代行サービス、情報更新お知らせサービス始めました。</p></center><BR><hr><BR>" );
+}
+//-->
+</SCRIPT>
+<body onLoad="if(isIE) {ieblink();ieblink1();}" BGCOLOR="#FFFFDD">
+<SCRIPT langage="JavaScript">
+
+	document.write( '<CENTER>' );
+    var isIE  = (navigator.appName.substring(0,9)=="Microsoft"); // IE判定
+	
+	word = "";
+	if ( IssueFlagT[kaisen] == 1 )
+	{
+		word = word + "＊＊只今" + IssueT[kaisen] + "円以上ご注文の方に翌月使えるクーポンコード発行中＊＊<BR>";
+	}
+	if ( UseFlagT[kaisen] == 1 )
+	{
+		if ( couponT[kaisen] == 1 )
+			word1 = "送料無料";
+		else if ( couponT[kaisen] == 2 )
+			word1 = "送料半額";
+		else if ( couponT[kaisen] == 3 )
+			word1 = "送料" + parT[kaisen] + "割引";
+		else if ( couponT[kaisen] == 4 )
+			word1 = "（" + ennT[kaisen] + "円×配送個数）を送料から差し引き";
+		word2 = "只今、税抜き" + UseT[kaisen] + "円以上お買いあげの方は先月発行のクーポンコードご利用可能<BR>クーポンコード入力で" + word1;
+		word = word + word2;
+	}
+	document.write( '<SPAN ID="new" STYLE="color:#FF0000"><BLINK>' + word + '</BLINK></SPAN><BR>');
+	document.write( '</CENTER>' );
+
+// 文字点滅用定義
+var count = 0;         // カウンタ
+var count1 = 0;         // カウンタ
+var timer = 700;       // タイマー
+var col = new Array(); // 色指定配列
+col[0] = "#FFFFF0";    // 色指定（背景色）
+col[1] = "#FF0000";    // 色指定（文字表示色）
+
+// 点滅関数
+function ieblink(){
+    document.all["new"].style.color = col[count]; // 色の変更
+    if(count==1) count=0;                         // カウンタ設定
+    else         ++count;                         // カウンタ設定
+    setTimeout("ieblink()",timer);                // タイマー設定
+}
+
+// 点滅関数1
+function ieblink1(){
+    document.all["new1"].style.color = col[count]; // 色の変更
+    if(count1==1) count1=0;                         // カウンタ設定
+    else         ++count1;                         // カウンタ設定
+    setTimeout("ieblink1()",timer);                // タイマー設定
+}
+
+	headerG();
+	TableDispG();
+	DataInput();
+function checkKey()
+{
+	if ( event.keyCode == 13 )
+	{
+		document.forms[0].focus();
+		alert( "まだ注文するデータがある場合は次の画面で「キャンセル」をクリックして\n注文入力に戻って下さい。\nEnterキーを押すと注文ボタンをクリックしたのと同じことになります。\n別の入力項目に移るにはTABキーを押すかマウスで移動してください。\n" );
+	}
+}
+window.document.onkeydown = checkKey;
+//-->
+</SCRIPT>
+</body>
+<P align="center"><A href="//www.bigflower.co.jp/index.html"><IMG src="//www.bigflower.co.jp/fram2.gif" width="112" height="30" border="0"></A><A href="//www.bigflower.co.jp/v/index.html"><IMG src="//www.bigflower.co.jp/fram3.gif" width="117" height="30" border="0"></A><A href="//www.bigflower.co.jp/v/v-ez.htm"><IMG src="//www.bigflower.co.jp/fram4.gif" width="117" height="30" border="0"></A><A href="//www.bigflower.co.jp/H/index.htm"><IMG src="//www.bigflower.co.jp/fram5.gif" width="117" height="30" border="0"></A><A href="//www.bigflower.co.jp/sizai/index.htm"><IMG src="//www.bigflower.co.jp/fram6.gif" width="117" height="30" border="0"></A><A href="//www.bigflower.co.jp/chuui.htm"><IMG src="//www.bigflower.co.jp/fram7.gif" width="117" height="30" border="0"></A></P>
+</html>

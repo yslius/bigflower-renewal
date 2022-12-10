@@ -1,0 +1,22 @@
+@mixin transition($value) {
+    -webkit-transition: $value;
+    -moz-transition: $value;
+    -o-transition: $value;
+    -ms-transition: $value;
+    transition: $value;
+}
+@mixin button($bgColor, $color) {
+    padding: 10px 5px;
+    border: unset;
+    border-radius: 5px;
+    color: $color;
+    background-color: $bgColor;
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    &:hover{
+        background-color: darken($bgColor, 10%);
+    }
+}
